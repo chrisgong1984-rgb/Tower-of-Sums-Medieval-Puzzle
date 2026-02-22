@@ -1,20 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Tower of Sums: Medieval Puzzle
 
-# Run and deploy your AI Studio app
+A strategic number-summing puzzle game with a medieval theme.
 
-This contains everything you need to run your app locally.
+## Deployment to Vercel
 
-View your app in AI Studio: https://ai.studio/apps/25a77faa-4e72-4ccb-9dca-c246bd2bd2c3
+To deploy this project to Vercel, follow these steps:
 
-## Run Locally
+### 1. Push to GitHub
+1. Create a new repository on GitHub.
+2. Initialize git in your local project folder:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+3. Link your local repository to GitHub and push:
+   ```bash
+   git remote add origin <your-github-repo-url>
+   git branch -M main
+   git push -u origin main
+   ```
 
-**Prerequisites:**  Node.js
+### 2. Deploy to Vercel
+1. Log in to [Vercel](https://vercel.com/).
+2. Click **"New Project"**.
+3. Import your GitHub repository.
+4. In the **"Environment Variables"** section, add:
+   - `GEMINI_API_KEY`: Your Google Gemini API Key.
+5. Click **"Deploy"**.
 
+### 3. SPA Routing
+A `vercel.json` file has been included to handle Single Page Application (SPA) routing, ensuring that deep links work correctly.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
