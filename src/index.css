@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=MedievalSharp&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "EB Garamond", serif;
+  --font-mono: "MedievalSharp", cursive;
+  --font-serif: "Cinzel", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#2d241e] text-[#f4e4bc] antialiased;
+    background-image: radial-gradient(circle at center, #3d3128 0%, #2d241e 100%);
+  }
+}
+
+.parchment {
+  background-color: #f4e4bc;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  color: #2d241e;
+}
+
+.stone-border {
+  border: 4px solid #4a3f35;
+  box-shadow: 
+    inset 2px 2px 0px #5d5044,
+    inset -2px -2px 0px #372e26,
+    4px 4px 12px rgba(0,0,0,0.5);
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0px #d4af37; }
+  50% { box-shadow: 0 0 15px #d4af37; }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
